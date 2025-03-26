@@ -225,15 +225,23 @@ document.addEventListener('DOMContentLoaded', function() {
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
             
-            // Here you would typically send the data to a server
-            // For demo purposes, we'll just log it and show a success message
-            console.log('Form submitted:', { name, email, subject, message });
+            // Send email using EmailJS
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                subject: subject,
+                message: message
+            };
             
-            // Show success message (in a real app, you'd wait for server response)
-            alert('Thank you for your message! I will get back to you soon.');
-            
-            // Reset form
-            contactForm.reset();
+            emailjs.send('service_bg83s8h', 'template_crb4kj4', templateParams, '24yqVlR-g20LF1us5')
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Thank you for your message! I will get back to you soon.');
+                    contactForm.reset();
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Sorry, there was an error sending your message. Please try again later.');
+                });
         });
     }
     
