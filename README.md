@@ -1,7 +1,7 @@
 # Machine Learning Portfolio
 
 ## Overview
-A modern, responsive portfolio website designed for machine learning professionals. This portfolio showcases skills, projects, experience, and education in the field of machine learning and AI.
+A modern, responsive portfolio website designed for machine learning professionals. This portfolio showcases skills, projects, experience, and education in the field of machine learning and UI/UX design.
 
 ## Features
 - Responsive design that works on all devices
@@ -27,7 +27,3 @@ A modern, responsive portfolio website designed for machine learning professiona
 ## License
 Feel free to use this template for your personal portfolio.
 
-## Credits
-- Font Awesome for icons
-- Google Fonts for typography
-- Placeholder images from placeholder.com

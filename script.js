@@ -87,10 +87,13 @@ document.addEventListener('DOMContentLoaded', function() {
             projectCards.forEach(card => {
                 if (filterValue === 'all') {
                     card.style.display = 'block';
-                } else if (card.getAttribute('data-category') === filterValue) {
-                    card.style.display = 'block';
                 } else {
-                    card.style.display = 'none';
+                    const categories = card.getAttribute('data-category').split(' ');
+                    if (categories.includes(filterValue)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
                 }
             });
         });
